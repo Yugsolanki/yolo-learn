@@ -11,6 +11,8 @@ dependencies = [
     "opencv-python>=5.0.0.93",
     "pillow>=12.3.0",
     "ultralytics>=8.4.154",
+    "torch",
+    "torchvision",
 ]
 
 [project.scripts]
@@ -22,3 +24,13 @@ build-backend = "uv_build"
 
 [tool.uv]
 package = false
+
+[[tool.uv.index]]
+name = "pytorch-cuda"
+url = "https://download.pytorch.org/whl/cu121"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch-cuda" }
+torchvision = { index = "pytorch-cuda" }
+torchaudio = { index = "pytorch-cuda" }
