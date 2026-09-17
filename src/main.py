@@ -7,5 +7,4 @@ DATASET_PATH = os.path.join(os.path.dirname(__file__), "../data")
 
 model = YOLO(model="yolo26n.pt")
 
-img = Image.open(os.path.join(DATASET_PATH, "red-clock.jpg"))
-results = model.predict(source=img, save=True, save_txt=True)
+results = model.predict(source="0", save=True, save_txt=True, conf=0.75, device="0", classes=[74])
