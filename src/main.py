@@ -3,7 +3,7 @@ import cv2
 from PIL import Image
 import os
 
-model = YOLO(model="yolo26n.pt")
+model = YOLO(model="yolo26x.pt")
 
 stream_url = 0
 cap = cv2.VideoCapture(stream_url)
