@@ -1,7 +1,5 @@
 from ultralytics import YOLO
 import cv2
-from PIL import Image
-import os
 
 model = YOLO(model="yolo26x.pt")
 
@@ -18,7 +16,7 @@ while True:
         print("Stream disconnected or ended")
         break
     
-    results = model.predict(source=frame, conf=0.5, verbose=False, classes=[74])
+    results = model.predict(source=frame, conf=0.4, verbose=False, classes=[74])
     
     for box in results[0].boxes:
         x1, y1, x2, y2 = box.xyxy[0].tolist()
