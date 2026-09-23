@@ -4,3 +4,4 @@ datasets
 models
 .env
 *.pt
+__pycache__
