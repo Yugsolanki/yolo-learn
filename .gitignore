@@ -1,4 +1,6 @@
 .venv
 runs
 datasets
+models
 .env
+*.pt
