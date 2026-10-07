@@ -5,3 +5,5 @@ models
 .env
 *.pt
 __pycache__
+
+captured_frames
